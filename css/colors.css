@@ -1,0 +1,272 @@
+./*
+  include/colors.css
+
+  Styles for nubbin bgs
+
+  Juan Carlos Espinosa Ceniceros
+  Project: FutureED
+  EducarUno 2015
+*/
+
+/*
+==================================================
+BACKGROUNDS
+==================================================
+*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+ 
+}
+
+
+[class*="bg-white"] {
+  background-color: #ffffff !important;
+  z-index: 0;
+}
+
+[class*="bg-flexus"] {
+  background-color: #2eaae1 !important;
+  z-index: 0;
+}
+
+[class*="bg-alt"]{
+  background-color: #3cafc1 !important;
+  z-index: 0;
+}
+
+[class*="bg-gray"] {
+  background-color: #97a6af !important;
+  z-index: 0;
+}
+
+[class*="bg-warm"] {
+  background-color: #df6e2b !important;
+  z-index: 0;
+}
+
+[class*="bg-sun"] {
+  background-color: #fcad26 !important;
+  z-index: 0;
+}
+
+[class*="bg-misty"] {
+  background-color: #4a7db7 !important;
+  z-index: 0;
+}
+
+[class*="bg-barny"] {
+  background-color: #892164 !important;
+  z-index: 0;
+}
+
+[class*="bg-leaf"] {
+  background-color: #44aa6c !important;
+  z-index: 0;
+}
+
+
+[class*="bg-hade"] {
+  background-color: #3895a3 !important;
+  z-index: 0;
+}
+
+[class*="bg-moon"]{
+  background: #435a6b !important;
+}
+
+[class*="bg-gray-light"]{
+  background: #CCCCCC !important;
+}
+
+/*
+================================================
+COLORS
+==================================================
+*/
+.c-gray-light{
+  color: #CCCCCC !important;
+}
+
+.c-pink{
+  color:#F50F35 !important; 
+}
+ 
+.c-white {
+  color: #ffffff !important;
+}
+
+.c-black {
+  color: #000000 !important;
+}
+
+.c-flexus {
+  color:  #2eaae1 !important;
+}
+
+.c-alt {
+  color: #3cafc1 !important;
+}
+
+.c-gray {
+  color: #97a6af !important;
+}
+
+.c-warm {
+  color: #df6e2b !important;
+}
+
+.c-sun {
+  color: #f4ae30 !important;
+}
+
+.c-misty {
+  color: #4a7db7 !important;
+}
+
+.c-barny {
+  color: #892164 !important;
+}
+
+
+.c-leaf {
+  color: #44aa6c !important;
+}
+
+.c-hade {
+  color: #3895a3 !important;
+}
+
+/*
+==================================================
+TABS
+==================================================
+*/
+
+li.active.fed-tab-main {
+  border-bottom-color: #db5034 !important;
+} li.active.fed-tab-main > a {
+  color: #db5034 !important;
+}
+
+li.active.fed-tab-alt {
+  border-bottom-color: #3cafc1 !important;
+} li.active.fed-tab-alt > a {
+  color: #3cafc1 !important;
+}
+
+li.active.fed-tab-gray {
+  border-bottom-color: #97a6af !important;
+} li.active.fed-tab-gray > a {
+  color: #97a6af !important;
+}
+
+li.active.fed-tab-lightblue {
+  border-bottom-color: #d3e9e2 !important;
+} li.active.fed-tab-lightblue > a {
+  color: #d3e9e2 !important;
+}
+
+li.active.fed-tab-courses {
+  border-bottom-color: #df6e2b !important;
+} li.active.fed-tab-courses > a {
+  color: #df6e2b !important;
+}
+
+li.active.fed-tab-projects {
+  border-bottom-color: #f4ae30 !important;
+} li.active.fed-tab-projects > a {
+  color: #f4ae30 !important;
+}
+
+li.active.fed-tab-channels {
+  border-bottom-color: #4a7db7 !important;
+} li.active.fed-tab-channels > a {
+  color: #4a7db7 !important;
+}
+
+li.active.fed-tab-groups {
+  border-bottom-color: #892164 !important;
+} li.active.fed-tab-groups > a {
+  color: #892164 !important;
+}
+
+li.active.fed-tab-market {
+  border-bottom-color: #44aa6c !important;
+} li.active.fed-tab-market > a {
+  color: #44aa6c !important;
+}
+
+li.active.fed-tab-companies {
+  border-bottom-color: #4a7ab3 !important;
+} li.active.fed-tab-companies > a {
+  color: #4a7ab3 !important;
+}
+
+li.active.fed-tab-social {
+  border-bottom-color: #3895a3 !important;
+} li.active.fed-tab-social > a {
+  color: #3895a3 !important;
+}
+
+/*
+==================================================
+LINKS COLORS
+==================================================
+*/
+
+a.fed-link {
+  color: #db5034;
+} a.fed-link:active,
+  a.fed-link:hover,
+  a.fed-link:focus,
+  a.fed-link:visited {
+  color: #db5034;
+}
+
+a.fed-link-alt {
+  color: #3cafc1;
+} a.fed-link-alt:active,
+  a.fed-link-alt:hover,
+  a.fed-link-alt:focus,
+  a.fed-link-alt:visited {
+  color: #3cafc1;
+}
+
+a.fed-link-black {
+  color: #606164;
+} a.fed-link-black:active,
+  a.fed-link-black:hover,
+  a.fed-link-black:focus,
+  a.fed-link-black:visited {
+  color: #606164;
+}
+
+a.fed-link-gray {
+  color: #97a6af;
+} a.fed-link-gray:active,
+  a.fed-link-gray:hover,
+  a.fed-link-gray:focus,
+  a.fed-link-gray:visited {
+  color: #97a6af;
+}
+
+a.fed-link-white {
+  color: #ffffff;
+} a.fed-link-white:active,
+  a.fed-link-white:hover,
+  a.fed-link-white:focus,
+  a.fed-link-white:visited {
+  color: #ffffff;
+}
+
+a.fed-link-lightblue {
+  color: #d3e9e2;
+} a.fed-link-lightblue:active,
+  a.fed-link-lightblue:hover,
+  a.fed-link-lightblue:focus,
+  a.fed-link-lightblue:visited {
+  color: #d3e9e2;
+}
