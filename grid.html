@@ -18,13 +18,14 @@
 
 <body>
    <div class="flex-container">
+
       <header class="center fixed flex-header nowrap row-reverse">
          <div class="check-trigger pd-x-20 pd-y-15 ">
             <input id="ac-1" name="accordion-1" type="checkbox">
             <label for="ac-1" class="c-blue icon flex align-start-sm baseline hidden visible-sm">☰</label>
          </div>
          <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-5">
-            <a class="pd c-blue flexus">Flexus</a>
+            <a class="pd-t-5 pd-x c-blue flexus"><img src="img/flexus-logo.png" style="width:120px;"></a>
             <div class="align-start-sm collapse-in column-sm hidden-sm flex">
                <a class="pd c-blue ">Getting started</a>
                <a class="pd c-blue ">CSS</a>
@@ -33,7 +34,7 @@
             </div>
          </nav>
       </header>
-      <main class="flex-wrap flex-100 bg-header flex-center relative">
+      <main class="flex-wrap flex-100 bg-header-second flex-center relative" style="padding-top:60px">
                   
          <div id="box">
             <div id="contentContainer">
@@ -52,16 +53,15 @@
             <div class="thing" style="width: 94px; height: 94px; border-radius: 47px; opacity: 0.559217; transform: translate3d(67px, 325px, 0px); transition-duration: 2.79306s;"></div>						
             </div>
          </div>
-         <div class="column">
-            <div class="flex flex-center">
-               <img src="img/flexus-logo.svg" style="width: 7rem;">
-               <div class="column">
-                  <h1 class="flexus-title">Flexus</h1>
-                  <h2 class="flexus-subtitle">FRAMEWORK CSS</h2>
-               </div>
+         <div class="between flex-0-1-1250">
+            <div class="flex-0-1-600">
+               <h1 class="flexus-title">Grid</h1>
+               <h2 class="flexus-subtitle-2 ">Smart responsive containers with just one class</h2>
+
             </div>
-            <h2 class="main-description bold">The first framework built and designed 
-                  from scratch with flexbox!</h2>
+            <a class=" pd-t-5 c-blue container-image flex-0-1-400 flex-img-thumbnail">
+               <img src="img/flexus-logo.png" kasperskylab_antibanner="on">
+            </a>
          </div>
 <!--
          <div id='stars'></div>
@@ -73,23 +73,47 @@
       <div class="bg-screens">
 
       </div>
-      <section class="flex-wrap flex-0-1-1250 pd-20">
-         <div class="flex-1-1-350 flex-center text-center font-40 content-center">
-            <h2 class="flue-color-blue bold mg-none">It’s time to use Flexbox!</h2>
-            <h5 class="bold mg-none">Improve the way we do Responsive Design</h5>
+      <section class="flex-0-1-1250 pd-20">
+         <div class="font-40 text-center">
+            <h2 class="flue-color-blue bold mg-none">Grid-media System</h2>
+<!--            <h5 class="bold mg-none">Improve your responsive design.</h5>-->
 <!--
               Achieve a Responsive Design<br>
               without Media Queries!
 -->
          </div>
-         <div class="container-image flex-1-1-250 pd-20 center">
-            <img src="img/screens2.svg" style="margin-top: -109px;width: 100%;" class="screens2">
-         </div>
-         <p class="flex-0-1-900 pd-x-15 font-24" style="line-height:1.9;">
-            
-            Flexus improves the way we do responsive design through the items align and directions, making the elements behave predictably when the page layout must adapt to different display devices solving common responsive web design problems easily even when it's an unknown size.
+         <p class="flex-0-1-900 mg font-24" style="line-height:1.9;">
+         The flexus grid-media system is not based in 12 columns. Instead of that, flexus has columns based in pixels which are breakpoints at the same time.
+         Let see this more deeper:
 <!--            Forgot the classes like xs, sm, lg, portrait, landscape etc. You will not have to declarate classes for each device or resolution anymore. Just write one class and you will have a full-responsive website. Technology means progress, see how easy CSS layout will become once Flexbox turns mainstream.-->
          </p>
+         <h3 class="text-center mg bold" style="font-size:6rem">flex-1-1-500</h3>
+         <div class="around font-19">
+            <div class="flex-1-1-250 pd">
+               <label class="flue-color-blue font-27 bold">Flex</label>
+               <p>flex is the prefix to set a container</p>
+            </div>
+            <div class="flex-1-1-250 pd">
+               <label class="flue-color-blue font-27 bold">1 - Grow</label>
+               <p>The first "1" means grow.
+                  For example, if you set 500px in the last position and there is more space available in the father div, this "1" grows the container until there is not more free space.
+                  <br>
+                  <br>
+                  if you set "grow" in "0" the container will stay in the measure that you set previously in "basis", in this case, 500px.
+                  <br>
+                  <br>
+                  If you set "grow" in "2" (1 to 5) and besides the father container has free space, this child container will grow the double than its brothers containers. it's up to the number you set in "Grow".
+               </p>
+            </div> 
+            <div class="flex-1-1-250 pd">
+               <label class="flue-color-blue font-27 bold">1 - Shrink</label>
+               <p>The second "1" means shrink. if you set "0" the container won't be responsive, so for recomendation always set this value in "1".</p>
+            </div>
+            <div class="flex-1-1-250 pd">
+               <label class="flue-color-blue font-27 bold">500 - Basis</label>
+               <p></p>
+            </div>
+         </div>
       </section>
       <section class="bg-home flex-wrap center mg-y-20 w100">
          <section class="flex-wrap flex-0-1-1250 center pd-20">
