@@ -49,9 +49,12 @@ body{
 *{
   font-family: Lato-Reg;
   line-height: 1.4;
+  letter-spacing: .12px;
     
   
 }
+
+
 
 .flue-color-blue{
    color: #2eaae1;
@@ -338,4 +341,22 @@ html{
     position: relative;
     align-self: baseline;
    background: white;
+}
+
+aside > ul li ul li a{
+   color: inherit;
+   
+}
+
+pre {
+    position: relative;
+    background: #edf9ff;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    letter-spacing: .5px;
+    color: #0085c2;
+    border-left: 3px solid #008ecf;
+    padding: 5px;
+    display: flex;
 }

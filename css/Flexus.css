@@ -510,6 +510,15 @@ input.text:focus {
   
 }
 
+/*
+==================================================
+BACKGROUNDS AND COLORS
+==================================================
+*/
+
+
+
+
 [class*="bg-night"] {
     background: linear-gradient(to right, rgb(45, 83, 95) 0%, rgb(37, 77, 87) 41%, rgb(22, 68, 78) 100%)!important;
 }
@@ -539,6 +548,22 @@ button[class*="bg-info"]:hover {
 [class*="bg-primary"] {
     background: linear-gradient(141deg, #13bfdf 0%, #49B6EA 69%, #53a1eb 100%)!important;
 }
+
+p[class*="bg-primary"] {
+    background: linear-gradient(141deg, #13bfdf 0%, #49B6EA 69%, #53a1eb 100%)!important;
+    z-index: 0;
+    padding: 20px;
+}
+
+p[class*="bg-primary-o"] {
+    background: rgba(46, 170, 225, 0.25) !important;
+    z-index: 0;
+    border: 1px solid rgba(46, 170, 225, 0.54) !important;
+    color: #008ecf !important;
+    padding: 20px;
+}
+
+
 
 button[class*="bg-primary"]:hover {
     -webkit-filter: brightness(1.1)!important;
