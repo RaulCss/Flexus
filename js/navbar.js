@@ -17,6 +17,20 @@ $(document).ready(function(){
 //        $('header').css("background","rgba(76, 175, 80, 0)")
     }
 });
+    
+    
+    $(window).scroll(function(){
+    if (window.pageYOffset >= 273) {
+        $('aside ul').css("top","85px");
+        $('aside ul').addClass('fixed');
+        
+      
+        
+    }
+    else{
+    $('aside ul').removeClass('fixed'); 
+    }
+});
 
     
     

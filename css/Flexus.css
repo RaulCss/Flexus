@@ -112,6 +112,7 @@ src: url('fonts/Lato-Reg.ttf');
 
 * {
   font-family: 'Museo Sans Cyrl 100', Open Sans;
+  box-sizing: border-box;
 
 }
 
@@ -698,7 +699,6 @@ body, html, .flex-container{
     box-sizing: border-box;
     flex-wrap: wrap;
     flex: 0 1 1250px;
-    margin: 5px 5px;
     align-items: flex-start;
 }
 
@@ -2667,3 +2667,7 @@ background:rgba(248,248,248,1)
 
 
 
+
+.text-justify {
+   text-align: justify;
+}

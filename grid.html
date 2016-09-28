@@ -24,7 +24,7 @@
             <input id="ac-1" name="accordion-1" type="checkbox">
             <label for="ac-1" class="c-blue icon flex align-start-sm baseline hidden visible-sm">☰</label>
          </div>
-         <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-5">
+         <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-x-20 pd-y-5">
             <a class="pd-t-5 pd-x c-blue flexus"><img src="img/flexus-logo.png" style="width:120px;"></a>
             <div class="align-start-sm collapse-in column-sm hidden-sm flex">
                <a class="pd c-blue ">Getting started</a>
@@ -54,44 +54,45 @@
                <div class="thing" style="width: 94px; height: 94px; border-radius: 47px; opacity: 0.559217; transform: translate3d(67px, 325px, 0px); transition-duration: 2.79306s;"></div>
             </div>
          </div>
-         <div class="between flex-0-1-1250">
+         <div class="between flex-0-1-1250 pd-20">
             <div class="flex-0-1-600">
                <h1 class="flexus-title">Grid</h1>
-               <h2 class="flexus-subtitle-2 ">Smart responsive containers with just one class</h2>
+               <h2 class="flexus-subtitle-2 ">Smart responsive containers and breakpoints without media-queries.</h2>
 
             </div>
             <a class=" pd-t-5 c-blue container-image flex-0-1-400 flex-img-thumbnail">
                <img src="img/flexus-logo.png" kasperskylab_antibanner="on">
             </a>
          </div>
-         <!--
-         <div id='stars'></div>
-         <div id='stars2'></div>
-         <div id='stars3'></div>
--->
-
       </main>
       <div class="bg-screens">
 
       </div>
       <section class="flex-0-1-1250 pd-20 between">
-         <article class="flex-1-1-950 font-17">
+         <article class="flex-1-1-900 font-17">
             <div class="font-29">
-               <h2 class="flue-color-blue bold mg-none">Containers</h2>
+               <h2 class="flue-color-blue bold mg-none">Parents containers</h2>
             </div>
-            <p>Flexus requires a containing element to wrap the subcontainer to wrap site contents.</p>
-            <pre>               
-               <code>
-               &lt;div class="flex-container"&gt;
-                         &lt;div class="flex-subcontainer"&gt;&lt;/div&gt;
-               &lt;/div&gt;
-               </code>
-            </pre>
+            <p>First of all flexus requires a containing element to wrap the subcontainer to wrap site contents.</p>
+            <div class="flex-wrap">
+               <pre class="flex-4 align-center">               
+                  <code>
+                     &lt;div class="flex-container"&gt;
+                              &lt;div class="flex-subcontainer"&gt;
+
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="container-image flex-2-1-100 mg mg-20">
+                  <img src="img/navegadormini.png" kasperskylab_antibanner="on">
+               </div>
+            </div>
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Grid-media System</h2>
             </div>
             <p class="flex-0-1-900" style="line-height:1.9;">
-               The flexus grid-media system is not based in 12 columns. Instead of that, flexus has columns based in pixels which are breakpoints at the same time. Let see this more deeper:
+               The flexus grid-media system is not based in 12 columns. Instead of that, flexus has columns based in pixels which are breakpoints at the same time without media-queries. Let see this more deeper:
                <!--            Forgot the classes like xs, sm, lg, portrait, landscape etc. You will not have to declarate classes for each device or resolution anymore. Just write one class and you will have a full-responsive website. Technology means progress, see how easy CSS layout will become once Flexbox turns mainstream.-->
             </p>
             <h3 class="text-center mg bold" style="font-size:4rem">flex-1-1-500</h3>
@@ -119,7 +120,36 @@
                   </p>
                </div>
             </div>
-            <p class="bg-primary-o"><span class="bold font-19">Note:</span> The parent div always has to have the class center, between, around, start, end, flex, flex-wrap or align positions.</p>
+            <div class="font-29">
+               <h2 class="flue-color-blue bold mg-none">Child containers </h2>
+            </div>
+            <p>Once again we have the parents container we can put child container using grid-media sistem.</p>
+            <div class="flex-wrap">
+               <pre class="flex-3 align-center">               
+                  <code>
+                     &lt;div class="flex-container"&gt;
+                              &lt;div class="flex-subcontainer"&gt;
+                                       &lt;flex-1-1-400&gt;
+
+                                       &lt;/div&gt;
+                                       &lt;flex-0-1-400&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-2-1-100 flex center align-start relative browser">
+                  <div class="absolute container-image flex-2-1-100 z-1">
+                     <img src="img/navegadormini.png">
+                  </div>
+                  <div class="flex flex-100 flex-center font-13 pd-20 mg-20 browser-child">
+                     <div class="flex-1 bg-primary pd">flex-1-1-400</div>
+                     <div class="bg-success pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue es bigger than the green one because it has "1" in grow, so it fill the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
          </article>
          <aside class="flex-1-1-250">
             <ul class="">
@@ -131,10 +161,10 @@
                      <li class=""><a href="#overview-type-links">Typography and links</a></li> 
                      <li class=""><a href="#overview-normalize">Normalize.css</a></li> 
                   </ul> 
-               </li> 
--->
-               <li class=""> <a href="#grid" class="c-blue font-19 bold">Grid system</a>
+               </li> -->
+               <li class="">
                   <ul class="nav">
+                     <a href="#grid" class="c-blue font-19 bold">Grid system</a>
                      <li class=""><a href="#grid-intro">Introduction</a></li>
                      <li class=""><a href="#overview-container">Containers</a></li>
                      <li class=""><a href="#grid-media-queries">Media queries</a></li>
