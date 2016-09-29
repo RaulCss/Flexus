@@ -360,3 +360,18 @@ pre {
     padding: 5px;
     display: flex;
 }
+
+.browser {
+/*
+    background-image: url(../img/navegadormini.png); 
+    background-size: 107%;
+    background-position: -9px -10px;
+    background-repeat: no-repeat;
+    background: white;
+    border: 1px solid #c2c2c2;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+*/
+       background: white;
+    border: 1px solid #c2c2c2;
+}

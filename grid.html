@@ -61,7 +61,7 @@
 
             </div>
             <a class=" pd-t-5 c-blue container-image flex-0-1-400 flex-img-thumbnail">
-               <img src="img/flexus-logo.png" kasperskylab_antibanner="on">
+               <img src="img/flexus-logo.png">
             </a>
          </div>
       </main>
@@ -69,13 +69,13 @@
 
       </div>
       <section class="flex-0-1-1250 pd-20 between">
-         <article class="flex-1-1-900 font-17">
+         <article class="flex-1-1-600 column font-17-p">
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Parents containers</h2>
             </div>
-            <p>First of all flexus requires a containing element to wrap the subcontainer to wrap site contents.</p>
-            <div class="flex-wrap">
-               <pre class="flex-4 align-center">               
+            <p>First of all flexus requires a containing element (flex-container) to wrap the subcontainer to wrap site contents.</p>
+            <div class="flex-wrap mg-b-20 center">
+               <pre class="flex-4 align-center mg-none">               
                   <code>
                      &lt;div class="flex-container"&gt;
                               &lt;div class="flex-subcontainer"&gt;
@@ -84,14 +84,33 @@
                      &lt;/div&gt;
                   </code>
                </pre>
-               <div class="container-image flex-2-1-100 mg mg-20">
-                  <img src="img/navegadormini.png" kasperskylab_antibanner="on">
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-0-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-night pd flex-center">flex-subcontainer</div>
+
+                  </div>
+                  <div class="flex-wrap pd-t">
+
+                     <div class="flex-wrap flex-1 flex-center">
+                        <div class="flex-0-1-30 browser column">
+                           <div class="flex-0-1-30"></div>
+                        </div>
+                        <div class="pd-x font-13">flex-container</div>
+                     </div>
+                     <div class="flex-wrap flex-1 flex-center">
+                        <div class="flex-0-1-30 bg-night column">
+                           <div class="flex-0-1-30"></div>
+                        </div>
+                        <div class="pd-x font-13">flex-subcontainer</div>
+                     </div>
+                  </div>
                </div>
             </div>
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Grid-media System</h2>
             </div>
-            <p class="flex-0-1-900" style="line-height:1.9;">
+            <p class="" style="line-height:1.9;">
                The flexus grid-media system is not based in 12 columns. Instead of that, flexus has columns based in pixels which are breakpoints at the same time without media-queries. Let see this more deeper:
                <!--            Forgot the classes like xs, sm, lg, portrait, landscape etc. You will not have to declarate classes for each device or resolution anymore. Just write one class and you will have a full-responsive website. Technology means progress, see how easy CSS layout will become once Flexbox turns mainstream.-->
             </p>
@@ -99,7 +118,7 @@
             <div class="around">
                <div class="flex-1-1-200 pd">
                   <label class="flue-color-blue font-27 bold">Flex</label>
-                  <p>flex is the prefix to set a container</p>
+                  <p>Flex is the prefix to set a container.</p>
                </div>
                <div class="flex-1-1-200 pd">
                   <label class="flue-color-blue font-27 bold">1 - Grow</label>
@@ -123,9 +142,9 @@
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Child containers </h2>
             </div>
-            <p>Once again we have the parents container we can put child container using grid-media sistem.</p>
-            <div class="flex-wrap">
-               <pre class="flex-3 align-center">               
+            <p>Once we have the parents container we can put child container into subcontainer using grid-media system.</p>
+            <div class="flex-wrap center">
+               <pre class="flex-3 align-center mg-none">               
                   <code>
                      &lt;div class="flex-container"&gt;
                               &lt;div class="flex-subcontainer"&gt;
@@ -139,19 +158,229 @@
                      &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-2-1-100 flex center align-start relative browser">
-                  <div class="absolute container-image flex-2-1-100 z-1">
-                     <img src="img/navegadormini.png">
-                  </div>
-                  <div class="flex flex-100 flex-center font-13 pd-20 mg-20 browser-child">
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-0-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd">flex-1-1-400</div>
-                     <div class="bg-success pd">flex-0-1-400</div>
+                     <div class="bg-info pd">flex-0-1-400</div>
                   </div>
                </div>
             </div>
-            <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue es bigger than the green one because it has "1" in grow, so it fill the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
+            <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue is bigger than the green one because it has "1" in grow, so it fills the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
+            <div class="font-29 mg-t-20">
+               <h2 class="flue-color-blue bold mg-none">Justify content </h2>
+            </div>
+            <p>Once we have a child containers we can add another child containers inside of them so we can learn how to justify content. We can distribute the child containers from the parent container with: start, center, end, around and between. Let's see center:</p>
+            <div class="flex-wrap mg-b center">
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-container"&gt;
+                              &lt;div class="flex-subcontainer"&gt;
+                                       &lt;div class="flex-1-1-400 center"&gt;
+                                                &lt;div class="bg-success pd-5"&gt;
+                                                   center
+                                                &lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 center">
+                        <div class="bg-success pd-5">center</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 start">
+                        <div class="bg-success pd-5">start</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+                  <pre class="flex-3 align-center mg-none font-13">               
+                  <code>
+
+            &lt;div class="flex-1-1-400 center"&gt;
+                    &lt;div class="bg-success pd-5"&gt;
+                    center
+                    &lt;/div&gt;
+            &lt;/div&gt;
+           
+
+                  </code>
+               </pre>
+               </div>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 center">
+                        <div class="bg-success pd-5">end</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+                  <pre class="flex-3 align-center mg-none font-13">               
+                  <code>
+
+            &lt;div class="flex-1-1-400 end"&gt;
+                    &lt;div class="bg-success pd-5"&gt;
+                    center
+                    &lt;/div&gt;
+            &lt;/div&gt;
+           
+
+                  </code>
+               </pre>
+               </div>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 between">
+                        <div class="bg-success pd-5">between</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+                  <pre class="flex-3 align-center mg-none font-13">               
+                  <code>
+
+            &lt;div class="flex-1-1-400 between"&gt;
+                    &lt;div class="bg-success pd-5"&gt;
+                    center
+                    &lt;/div&gt;
+            &lt;/div&gt;
+           
+
+                  </code>
+               </pre>
+               </div>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 around">
+                        <div class="bg-success pd-5">around</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+                  <pre class="flex-3 align-center mg-none font-13">               
+                  <code>
+
+            &lt;div class="flex-1-1-400 center"&gt;
+                    &lt;div class="bg-success pd-5"&gt;
+                    center
+                    &lt;/div&gt;
+            &lt;/div&gt;
+           
+
+                  </code>
+               </pre>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23 mg-t-20">
+                  <h2 class="flue-color-blue bold mg-none">Start</h2>
+               </div>
+               <p class="mg-t-5 w100">Start pull the items of the container at the start of it.</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                           &lt;div class="flex-1-1-400 start"&gt;
+                                    &lt;div class="bg-success pd-5"&gt;
+                                       start
+                                    &lt;/div&gt;
+                           &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 start">
+                        <div class="bg-success pd-5">start</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23">
+                  <h2 class="flue-color-blue bold mg-none">End</h2>
+               </div>
+               <p class="mg-t-5 w100">Start pull the items of the container at the start of it.</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                           &lt;div class="flex-1-1-400 end"&gt;
+                                    &lt;div class="bg-success pd-5"&gt;
+                                       end
+                                    &lt;/div&gt;
+                           &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 end">
+                        <div class="bg-success pd-5">end</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23">
+                  <h2 class="flue-color-blue bold mg-none">Around</h2>
+               </div>
+               <p class="mg-t-5 w100">Around put the items evenly distributed along the row, with equal space on either side of each element.
+               </p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                           &lt;div class="flex-1-1-400 around"&gt;
+                                    &lt;div class="bg-success pd-5"&gt;
+                                       around
+                                    &lt;/div&gt;
+                           &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 around">
+                        <div class="bg-success pd-5">around</div>
+                        <div class="bg-success pd-5">around</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23">
+                  <h2 class="flue-color-blue bold mg-none">Between</h2>
+               </div>
+               <p class="mg-t-5 w100">Items are evenly distributed along the row without spaces.</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                           &lt;div class="flex-1-1-400 between"&gt;
+                                    &lt;div class="bg-success pd-5"&gt;
+                                       between
+                                    &lt;/div&gt;
+                           &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 between">
+                        <div class="bg-success pd-5">between</div>
+                        <div class="bg-success pd-5">between</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </article>
-         <aside class="flex-1-1-250">
+         <aside class="flex-0-1-300 hidden-md">
             <ul class="">
                <!--
                <li class=""><a href="#overview" class="c-blue">Overview</a> 
@@ -164,9 +393,10 @@
                </li> -->
                <li class="">
                   <ul class="nav">
-                     <a href="#grid" class="c-blue font-19 bold">Grid system</a>
-                     <li class=""><a href="#grid-intro">Introduction</a></li>
-                     <li class=""><a href="#overview-container">Containers</a></li>
+                     <a href="#grid" class="c-blue font-19 bold">Parent containers</a>
+                     <li class=""><a href="#grid-intro">Grid-media System</a></li>
+                     <li class=""><a href="#overview-container">Child containers</a></li>
+                     <li class=""><a href="#overview-container">Justify-content</a></li>
                      <li class=""><a href="#grid-media-queries">Media queries</a></li>
                      <li><a href="#grid-options">Grid options</a></li>
                      <li class=""><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
@@ -183,54 +413,6 @@
                </li>
             </ul>
          </aside>
-      </section>
-      <section class="bg-home flex-wrap center mg-y-20 w100">
-         <section class="flex-wrap flex-0-1-1250 center pd-20">
-            <article class=" flex-0-1-900 around mg-b-20 row-reverse">
-               <div class="container-image flex-0-1-200 pd-y-20 center">
-                  <img src="img/clock.svg" style="width: 11rem;">
-               </div>
-               <div class=" flex-0-1-550">
-                  <h3 class="c-white text-center mg font-40 bold">Write less, Do more</h3>
-                  <h4 class="align-center c-white flex-wrap  font-24 mg-none ">
-                     You could make a perfect responsive
-                     website writting less than other
-                     frameworks  that doesn’t have 
-                     flexbox as basis
-                  </h4>
-               </div>
-            </article>
-            <article class="flex-0-1-900 around mg-y-20">
-               <div class="container-image flex-0-1-150 center">
-                  <img src="img/semantic.png" style="width: 11rem;">
-               </div>
-               <div class="column pd-x-20 align-center flex-0-1-550">
-                  <h3 class="c-white font-40 mg bold">Semantic</h3>
-                  <h4 class="c-white flex-wrap font-24 mg-none">
-                     Everything is semantic from flexbox.
-                      Now you can use flexus and learn flexbox at the same time!
-                  </h4>
-               </div>
-            </article>
-            <article class=" flex-0-1-900 between mg-t-20">
-               <div class="">
-                  <h3 class="c-white text-center mg font-40 bold">Simple way to center your elements!</h3>
-                  <h4 class=" c-white  font-24 mg-none text-center">
-                     Forgot to use padding, margin to center a element, with flexus you can align items,
-                     vertical and horizontal way without tricks, besides, you can distribute the elements 
-                     and a group of elements in new ways!<br>
-                     Around, Between, Start, End.
-                  </h4>
-               </div>
-               <div class="container-image flex-1 mg-t-20 bg-browser pd-x-20" style="padding-top: 80px;">
-                  <div class="align-center w100 mg-y-20 border-home flex-wrap">
-                     <h4 class="text-center c-white bg-alt pd mg flex-1">this is always at left </h4>
-                     <h4 class="text-center c-white bg-alt pd mg flex-1">this is always at top and center </h4>
-                     <h4 class="text-center c-white bg-alt pd mg flex-1">this is always at right </h4>
-                  </div>
-               </div>
-            </article>
-         </section>
       </section>
 
       <!--   <div class="modal-frame">  <div class="modal">            <div class="modal-inset">                <div class="button close"><i class="fa fa-close"></i></div>          <div class="modal-body">                        <h3>Such Modal, Much Animate!</h3>                        <p>Nothing groundbreaking, but I hope you enjoyed <br /> the physics for the open/close animation =).</p>        <p class="ps">**I know the SASS is a bit messy, I did this on the fly and for fun <br /> and w.e. I DO WHAT I WANT!!</p>                </div>            </div>    </div></div><div class="modal-overlay"></div><button class="fancy-btn open">Can I haz Modal?</button>-->
