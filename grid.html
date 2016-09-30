@@ -71,14 +71,19 @@
       <section class="flex-0-1-1250 pd-20 between">
          <article class="flex-1-1-600 column font-17-p">
             <div class="font-29">
-               <h2 class="flue-color-blue bold mg-none">Parents containers</h2>
+               <h2 class="flue-color-blue bold mg-none">Introduction</h2>
             </div>
-            <p>First of all flexus requires a containing element (flex-container) to wrap the subcontainer to wrap site contents.</p>
+            <p>
+            Flexus model is constituted of parent container referred as flex container and its inmediate children which are called flex items. So, most of the time flex-containers are flex-items of another flex-container.</p>
+            <div class="font-29">
+               <h2 class="flue-color-blue bold mg-none">Main containers</h2>
+            </div>
+            <p>First of all flexus requires two main flex containers which are "flex-body" and "flex-main.<br> ( As you can see flex-main is a flex-item of flex-body ).
             <div class="flex-wrap mg-b-20 center">
                <pre class="flex-4 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-container"&gt;
-                              &lt;div class="flex-subcontainer"&gt;
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
 
                               &lt;/div&gt;
                      &lt;/div&gt;
@@ -87,7 +92,7 @@
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-0-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-night pd flex-center">flex-subcontainer</div>
+                     <div class="flex-1 bg-night pd flex-center">flex-main</div>
 
                   </div>
                   <div class="flex-wrap pd-t">
@@ -96,13 +101,13 @@
                         <div class="flex-0-1-30 browser column">
                            <div class="flex-0-1-30"></div>
                         </div>
-                        <div class="pd-x font-13">flex-container</div>
+                        <div class="pd-x font-13">flex-body</div>
                      </div>
                      <div class="flex-wrap flex-1 flex-center">
                         <div class="flex-0-1-30 bg-night column">
                            <div class="flex-0-1-30"></div>
                         </div>
-                        <div class="pd-x font-13">flex-subcontainer</div>
+                        <div class="pd-x font-13">flex-main</div>
                      </div>
                   </div>
                </div>
@@ -140,14 +145,14 @@
                </div>
             </div>
             <div class="font-29">
-               <h2 class="flue-color-blue bold mg-none">Child containers </h2>
+               <h2 class="flue-color-blue bold mg-none">Flex containers </h2>
             </div>
-            <p>Once we have the parents container we can put child container into subcontainer using grid-media system.</p>
-            <div class="flex-wrap center">
+            <p>Once we have declarated our main flex containers we can put flex containers into flex-main using grid-media system.</p>
+            <div class="flex-wrap center mg-b">
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-container"&gt;
-                              &lt;div class="flex-subcontainer"&gt;
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
                                        &lt;flex-1-1-400&gt;
 
                                        &lt;/div&gt;
@@ -160,7 +165,7 @@
                </pre>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
-                  <div class="flex-0-1-200 flex-wrap browser font-13 pd-x">
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd">flex-1-1-400</div>
                      <div class="bg-info pd">flex-0-1-400</div>
                   </div>
@@ -168,18 +173,75 @@
             </div>
             <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue is bigger than the green one because it has "1" in grow, so it fills the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
             <div class="font-29 mg-t-20">
-               <h2 class="flue-color-blue bold mg-none">Justify content </h2>
+               <h2 class="flue-color-blue bold mg-none">Layout direction </h2>
             </div>
-            <p>Once we have a child containers we can add another child containers inside of them so we can learn how to justify content. We can distribute the child containers from the parent container with: start, center, end, around and between. Let's see center:</p>
-            <div class="flex-wrap mg-b center">
+            <p>By default, the direction of a flex container is set to row so the child elements display horizontally. Whichever direction you set on your flex container is referred to as its "main direction" or "main axis", while the other direction (the one you didn’t choose) becomes its “cross direction" or "cross axis". You can switch the "main axis" to vertical and the cross axis to horizontal by setting the class "column" in the flex container.</p>
+            <div class="flex-wrap center mg-b">
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-container"&gt;
-                              &lt;div class="flex-subcontainer"&gt;
-                                       &lt;div class="flex-1-1-400 center"&gt;
-                                                &lt;div class="bg-success pd-5"&gt;
-                                                   center
-                                                &lt;/div&gt;
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-0-1-400 column"&gt;
+                                                &lt;div&gt;item&lt;/div&gt;
+                                                &lt;div&gt;item&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-1-1-400 row"&gt;
+                                                &lt;div&gt;item&lt;/div&gt;
+                                                &lt;div&gt;item&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class=""></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd column">
+                        <div class="bg-success pd-5 mg-5">item</div>
+                        <div class="bg-success pd-5 mg-5">item</div>
+                     </div>
+                     <div class=" flex-1 bg-info pd pd-x-5 flex">
+                        <div class="bg-success pd-5 mg-5">item</div>
+                        <div class="bg-success pd-5 mg-y-5">item</div>
+                     </div>
+                  </div>
+                  <div class="flex-wrap pd-t">
+
+                     <div class="flex-wrap flex-1 flex-center">
+                        <div class="flex-0-1-30 bg-primary column">
+                           <div class="flex-0-1-30"></div>
+                        </div>
+                        <div class="pd-x font-13">column</div>
+                     </div>
+                     <div class="flex-wrap flex-1 flex-center">
+                        <div class="flex-0-1-30 bg-info column">
+                           <div class="flex-0-1-30"></div>
+                        </div>
+                        <div class="pd-x font-13">row</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Always you have to specify the container direction, whether will be "row" or "column".<br>By the way, instead of row you can use directly the main-axis and the cross-axis alignments such m-start, c-start etc.</p>
+            <div class="font-29 mg-t-20">
+               <h2 class="flue-color-blue bold mg-none">Flex items</h2>
+            </div>
+<!--            <p>Flexus model is constituted of parent container referred as flex container and its immediate children which are called flex items.</p>-->
+            <div class="font-23 mg-t-20">
+               <h2 class="flue-color-blue bold mg-none">Main-axis alignments </h2>
+            </div>
+            <p>The justify-content property aligns flex items along the main axis of the current line of the flex container. It helps distribute left free space in the flex container. So If "column" is not set, we can distribute flex items horizontally with the prefix "m-": m-start, m-center, m-end, m-around and m-between.</p>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23 mg-t-20  flex-100">
+                  <h2 class="flue-color-blue bold mg-none flex-100">m-start</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are set toward at the start (left) of the main axis (top, whether you are using column).</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 m-start"&gt;
+                                                &lt;div&gt;start&lt;/div&gt;
                                        &lt;/div&gt;
                                        &lt;div class="flex-0-1-400"&gt;
 
@@ -191,190 +253,372 @@
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 center">
-                        <div class="bg-success pd-5">center</div>
+                     <div class="flex-1 bg-primary pd-5 m-start">
+                        <div class="bg-success pd-5">m-start</div>
                      </div>
                      <div class="bg-info pd">flex-0-1-400</div>
                   </div>
                </div>
+            </div>
+            <div class="font-23 mg-t-20">
+               <h2 class="flue-color-blue bold mg-none">m-center </h2>
+            </div>
+            <p>Flex items are horizontally aligned at the center of the flex container (vertically center, whether you are using column).</p>
+            <div class="flex-wrap mg-b center">
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 m-center"&gt;
+                                                &lt;div&gt;m-center&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 start">
-                        <div class="bg-success pd-5">start</div>
+                     <div class="flex-1 bg-primary pd-5 m-center">
+                        <div class="bg-success pd-5">m-center</div>
                      </div>
                      <div class="bg-info pd">flex-0-1-400</div>
                   </div>
-                  <pre class="flex-3 align-center mg-none font-13">               
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">m-end</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are set toward at the end (right) of the flex container (bottom, whether you are using column).</p>
+               <pre class="flex-3 align-center mg-none">               
                   <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 m-end"&gt;
+                                                &lt;div&gt;m-end&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
 
-            &lt;div class="flex-1-1-400 center"&gt;
-                    &lt;div class="bg-success pd-5"&gt;
-                    center
-                    &lt;/div&gt;
-            &lt;/div&gt;
-           
-
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
                   </code>
                </pre>
-               </div>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 center">
-                        <div class="bg-success pd-5">end</div>
+                     <div class="flex-1 bg-primary pd-5 m-end">
+                        <div class="bg-success pd-5">m-end</div>
                      </div>
                      <div class="bg-info pd">flex-0-1-400</div>
                   </div>
-                  <pre class="flex-3 align-center mg-none font-13">               
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">m-between</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the main axis, first and last flex items are aligned to the edges of the main axis of the flex container.</p>
+               <pre class="flex-3 align-center mg-none">               
                   <code>
-
-            &lt;div class="flex-1-1-400 end"&gt;
-                    &lt;div class="bg-success pd-5"&gt;
-                    center
-                    &lt;/div&gt;
-            &lt;/div&gt;
-           
-
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 m-between"&gt;
+                                                &lt;div&gt;m-between&lt;/div&gt;
+                                                &lt;div&gt;m-between&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
                   </code>
                </pre>
-               </div>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 between">
-                        <div class="bg-success pd-5">between</div>
+                        <div class="bg-success pd-5">m-between</div>
+                        <div class="bg-success pd-5">m-between</div>
                      </div>
-                     <div class="bg-info pd">flex-0-1-400</div>
-                  </div>
-                  <pre class="flex-3 align-center mg-none font-13">               
-                  <code>
-
-            &lt;div class="flex-1-1-400 between"&gt;
-                    &lt;div class="bg-success pd-5"&gt;
-                    center
-                    &lt;/div&gt;
-            &lt;/div&gt;
-           
-
-                  </code>
-               </pre>
-               </div>
-               <div class="flex-0-1-200 column mg-20">
-                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
-                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 around">
-                        <div class="bg-success pd-5">around</div>
-                     </div>
-                     <div class="bg-info pd">flex-0-1-400</div>
-                  </div>
-                  <pre class="flex-3 align-center mg-none font-13">               
-                  <code>
-
-            &lt;div class="flex-1-1-400 center"&gt;
-                    &lt;div class="bg-success pd-5"&gt;
-                    center
-                    &lt;/div&gt;
-            &lt;/div&gt;
-           
-
-                  </code>
-               </pre>
-               </div>
-            </div>
-            <div class="flex-wrap mg-b center">
-               <div class="font-23 mg-t-20">
-                  <h2 class="flue-color-blue bold mg-none">Start</h2>
-               </div>
-               <p class="mg-t-5 w100">Start pull the items of the container at the start of it.</p>
-               <pre class="flex-3 align-center mg-none">               
-                  <code>
-                           &lt;div class="flex-1-1-400 start"&gt;
-                                    &lt;div class="bg-success pd-5"&gt;
-                                       start
-                                    &lt;/div&gt;
-                           &lt;/div&gt;
-                  </code>
-               </pre>
-               <div class="flex-0-1-200 column mg-20">
-                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
-                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 start">
-                        <div class="bg-success pd-5">start</div>
-                     </div>
-                     <div class="bg-info pd">flex-0-1-400</div>
                   </div>
                </div>
             </div>
             <div class="flex-wrap mg-b center">
-               <div class="font-23">
-                  <h2 class="flue-color-blue bold mg-none">End</h2>
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">m-around</h2>
                </div>
-               <p class="mg-t-5 w100">Start pull the items of the container at the start of it.</p>
-               <pre class="flex-3 align-center mg-none">               
-                  <code>
-                           &lt;div class="flex-1-1-400 end"&gt;
-                                    &lt;div class="bg-success pd-5"&gt;
-                                       end
-                                    &lt;/div&gt;
-                           &lt;/div&gt;
-                  </code>
-               </pre>
-               <div class="flex-0-1-200 column mg-20">
-                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
-                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 end">
-                        <div class="bg-success pd-5">end</div>
-                     </div>
-                     <div class="bg-info pd">flex-0-1-400</div>
-                  </div>
-               </div>
-            </div>
-            <div class="flex-wrap mg-b center">
-               <div class="font-23">
-                  <h2 class="flue-color-blue bold mg-none">Around</h2>
-               </div>
-               <p class="mg-t-5 w100">Around put the items evenly distributed along the row, with equal space on either side of each element.
+               <p class="mg-t-5 w100">Flex items are displayed with equal spacing around every flex item along the main axis, even the first and last flex items.
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                           &lt;div class="flex-1-1-400 around"&gt;
-                                    &lt;div class="bg-success pd-5"&gt;
-                                       around
-                                    &lt;/div&gt;
-                           &lt;/div&gt;
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 m-around"&gt;
+                                                &lt;div&gt;m-around&lt;/div&gt;
+                                                &lt;div&gt;m-around&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
                   </code>
                </pre>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 around">
-                        <div class="bg-success pd-5">around</div>
-                        <div class="bg-success pd-5">around</div>
+                        <div class="bg-success pd-5">m-around</div>
+                        <div class="bg-success pd-5">m-around</div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="flex-wrap mg-b center">
-               <div class="font-23">
-                  <h2 class="flue-color-blue bold mg-none">Between</h2>
+            <div class="font-29 mg-t-20">
+               <h2 class="flue-color-blue bold mg-none">Cross-axis aligments </h2>
+            </div>
+            <p>
+            Flex items can be aligned in the cross axis of the current line of the flex container, similar to justify-content but in the perpendicular direction. So If "column" is not set, we can distribute flex items vertically with the prefix "c-":<br> c-start, c-center, c-end, c-around and c-between.
+                           <div class="flex-wrap mg-b center">
+               <div class="font-23 mg-t-20  flex-100">
+                  <h2 class="flue-color-blue bold mg-none flex-100">c-start</h2>
                </div>
-               <p class="mg-t-5 w100">Items are evenly distributed along the row without spaces.</p>
+               <p class="mg-t-5 w100">Flex items are set toward at the start (top) of the cross axis (left, whether you are using column).</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                           &lt;div class="flex-1-1-400 between"&gt;
-                                    &lt;div class="bg-success pd-5"&gt;
-                                       between
-                                    &lt;/div&gt;
-                           &lt;/div&gt;
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-start"&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
                   </code>
                </pre>
                <div class="flex-0-1-200 column mg-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
-                     <div class="flex-1 bg-primary pd-5 between">
-                        <div class="bg-success pd-5">between</div>
-                        <div class="bg-success pd-5">between</div>
+                     <div class="flex-1 bg-primary pd-5 align-start">
+                        <div class="bg-success pd-5">c-start</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23 mg-t-20  flex-100">
+                  <h2 class="flue-color-blue bold mg-none flex-100">c-center</h2>
+               </div>
+               <p class="w100">Flex items are vertically aligned at the center of the cross axis of the flex container (horizontally center, whether you are using column).</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-center"&gt;
+                                                &lt;div&gt;c-center&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 align-center">
+                        <div class="bg-success pd-5">c-center</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <p class="bg-success-o"><span class="bold font-19">Tip:</span> You can combine "center" and "align-center" to center vertically and horizontally with this class: flex-center.</p>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">c-end</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are set toward at the end (bottom) of the flex container (right, whether you are using column).</p>
+               <pre class="flex-3 c-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-end"&gt;
+                                                &lt;div&gt;c-end&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class="flex-0-1-400"&gt;
+
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 align-end">
+                        <div class="bg-success pd-5">c-end</div>
+                     </div>
+                     <div class="bg-info pd">flex-0-1-400</div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">c-between</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the across axis, first and last flex items are aligned to the edges of the cross axis of the flex container.</p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-between"&gt;
+                                                &lt;div class="flex-100"&gt;c-between&lt;/div&gt;
+                                                &lt;div&gt;c-between&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 c-between">
+                        <div class="bg-success pd-5 flex-100">c-between</div>
+                        <div class="bg-success pd-5">c-between</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">c-around</h2>
+               </div>
+               <p class="mg-t-5 w100">Flex items are displayed with equal spacing around every flex item along the cross axis, even the first and last flex items.
+               </p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-around"&gt;
+                                                &lt;div class="flex-100"&gt;c-around&lt;/div&gt;
+                                                &lt;div&gt;c-around&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 c-around">
+                        <div class="bg-success pd-5 flex-100">c-around</div>
+                        <div class="bg-success pd-5">c-around</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p class="bg-primary-o"><span class="bold font-19">Remember:</span> c-around and c-between just work if there are two rows in flex container. That's why we've set flex-100 (100%) to the first flex-item, so the second one passed down and get 2 rows.</p>
+            <div class="flex-wrap mg-b center">
+               <div class="font-27  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">Align-self</h2>
+               </div>
+               <p class="mg-t-5 w100">This align-self property allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+               </p>
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">self-end</h2>
+               </div>
+               <p class="w100 mg-t-5">Self-end property allows set toward at the end of the cross axis. Overridden cross-axis.
+               </p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-start"&gt;
+                                                &lt;div class="self-end"&gt;self-end&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 c-start">
+                        <div class="bg-success pd-5 self-end">self-end</div>
+                        <div class="bg-success pd-5">c-start</div>
+                        <div class="bg-success pd-5">c-start</div>
+                        <div class="bg-success pd-5">c-start</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">self-center</h2>
+               </div>
+               <p class="mg-t-5 w100">Self-end property allows set toward at the center of the cross axis. Overridden cross-axis.
+               </p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-start"&gt;
+                                                &lt;div class="self-center"&gt;self-center&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                                &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 c-start">
+                        <div class="bg-success pd-5 self-center">self-center</div>
+                        <div class="bg-success pd-y-5">c-start</div>
+                        <div class="bg-success pd-y-5">c-start</div>
+                        <div class="bg-success pd-y-5">c-start</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-wrap mg-b center">
+               <div class="font-23  flex-100">
+                  <h2 class="flue-color-blue bold mg-none">self-start</h2>
+               </div>
+               <p class="mg-t-5 w100">Self-end property allows set toward at the start of the cross axis. Overridden cross-axis.
+               </p>
+               <pre class="flex-3 align-center mg-none">               
+                  <code>
+                     &lt;div class="flex-body"&gt;
+                              &lt;div class="flex-main"&gt;
+                                       &lt;div class="flex-1-1-400 c-center"&gt;
+                                                &lt;div class="self-start"&gt;self-start&lt;/div&gt;
+                                                &lt;div&gt;c-center&lt;/div&gt;
+                                                &lt;div&gt;c-center&lt;/div&gt;
+                                                &lt;div&gt;c-center&lt;/div&gt;
+                                       &lt;/div&gt;
+                              &lt;/div&gt;
+                     &lt;/div&gt;
+                  </code>
+               </pre>
+               <div class="flex-0-1-200 column mg-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+                  <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
+                     <div class="flex-1 bg-primary pd-5 c-center">
+                        <div class="bg-success pd-5 self-start">self-start</div>
+                        <div class="bg-success pd-y-5">c-center</div>
+                        <div class="bg-success pd-y-5">c-center</div>
+                        <div class="bg-success pd-y-5">c-center</div>
                      </div>
                   </div>
                </div>
@@ -396,7 +640,9 @@
                      <a href="#grid" class="c-blue font-19 bold">Parent containers</a>
                      <li class=""><a href="#grid-intro">Grid-media System</a></li>
                      <li class=""><a href="#overview-container">Child containers</a></li>
+                     <li class=""><a href="#overview-container">Layout direction</a></li>
                      <li class=""><a href="#overview-container">Justify-content</a></li>
+                     <li class=""><a href="#overview-container">Align-items</a></li>
                      <li class=""><a href="#grid-media-queries">Media queries</a></li>
                      <li><a href="#grid-options">Grid options</a></li>
                      <li class=""><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>

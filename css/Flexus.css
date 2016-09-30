@@ -574,6 +574,19 @@ button[class*="bg-primary"]:hover {
     background: linear-gradient(to right, rgb(120, 218, 62) 0%, rgba(139, 230, 53, 1) 53%, rgba(139, 230, 53, 1) 100%) !important;
 }
 
+p[class*="bg-success"] {
+    background: linear-gradient(to right, rgb(120, 218, 62) 0%, rgba(139, 230, 53, 1) 53%, rgba(139, 230, 53, 1) 100%) !important;
+    padding: 20px;
+}
+
+p[class*="bg-success-o"] {
+   background: #dfffbe !important;
+    border: 1px solid rgb(120, 218, 62) !important;
+    color: #44aa6c !important;
+    padding: 20px;
+}
+
+
 [class*="bg-alert"] {
     background: linear-gradient(to right, rgb(241, 211, 103) 0%, rgb(254, 193, 69) 100%) !important;
 }
@@ -694,6 +707,33 @@ body, html, .flex-container{
 
 
 .flex-subcontainer{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex: 0 1 1250px;
+    align-items: flex-start;
+}
+
+
+.flex-body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.flex-main > footer{
+    align-self: flex-end;
+}
+
+.flex-footer{
+  align-self: flex-end;
+  width:100vw;
+}
+
+
+.flex-main{
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -1217,6 +1257,11 @@ hr {
   display: flex;
 }
 
+.row{
+  flex-wrap:wrap;
+  display: flex;
+}
+
 .wrap{
   flex-wrap:wrap;
   
@@ -1302,6 +1347,90 @@ hr {
   flex-wrap: wrap;
 }
 
+
+/*CONTENT*/
+
+.rows-start{
+  align-content: flex-start;
+}
+
+.rows-end{
+  align-content: flex-end;
+}
+
+.rows-center{
+  align-content: center;
+}
+
+.c-between{
+  align-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.c-around{
+  align-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*JUSTIFY*/
+
+.m-start{
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-between{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-around{
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-end{
+  justify-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-center{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*ALIGN-ITEMS*/
+
+.baseline{
+  align-self: baseline;
+}
+
+.c-end{
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-start{
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-center{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .self-center{
   align-self: center;
 }
@@ -1331,6 +1460,22 @@ hr {
   display: flex;
   flex-wrap: wrap;
 }
+
+.justy-center{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center{
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex
+}
+
+
+
 
 .justy-center{
   justify-content: center;
