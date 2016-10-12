@@ -25,7 +25,7 @@
             <label for="ac-1" class="c-blue icon flex align-start-sm baseline hidden visible-sm">☰</label>
          </div>
          <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-x-20 pd-y-5">
-            <a class="pd-t-5 pd-x c-blue flexus"><img src="img/flexus-logo.png" style="width:120px;"></a>
+            <a class="pd-t-5 pd-x c-blue flexus"  href="index.html"><img src="img/flexus-logo.png" style="width:120px;"></a>
             <div class="align-start-sm collapse-in column-sm hidden-sm flex">
                <a class="pd c-blue ">Getting started</a>
                <a class="pd c-blue ">CSS</a>
@@ -54,7 +54,7 @@
                <div class="thing" style="width: 94px; height: 94px; border-radius: 47px; opacity: 0.559217; transform: translate3d(67px, 325px, 0px); transition-duration: 2.79306s;"></div>
             </div>
          </div>
-         <div class="between flex-0-1-1250 pd-20">
+         <div class="between flex-0-1-1250 mg-15">
             <div class="flex-0-1-600">
                <h1 class="flexus-title">Grid</h1>
                <h2 class="flexus-subtitle-2 ">Smart responsive containers and breakpoints without media-queries.</h2>
@@ -68,13 +68,13 @@
       <div class="bg-screens">
 
       </div>
-      <section class="flex-0-1-1250 pd-20 between">
+      <section class="flex-0-1-1250 mg-15 between">
          <article class="flex-1-1-600 column font-17-p">
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Introduction</h2>
             </div>
             <p>
-            Flexus model is constituted of parent container referred as flex container and its inmediate children which are called flex items. So, most of the time flex-containers are flex-items of another flex-container.</p>
+            Flexus model is constituted of parent container referred as flex container and its inmediate children which are called flex items. So, flex-containers can be flex-items of another flex-container and so on.</p>
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Main containers</h2>
             </div>
@@ -89,7 +89,7 @@
                      &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-0-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-night pd flex-center">flex-main</div>
@@ -151,20 +151,20 @@
             <div class="flex-wrap center mg-b">
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;flex-1-1-400&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;flex-1-1-400&gt;
 
-                                       &lt;/div&gt;
-                                       &lt;flex-0-1-400&gt;
+                              &lt;/div&gt;
+                              &lt;flex-0-1-400&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
-                  <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
+               <div class="flex-0-1-200 column mg mg-y-20">
+                  <div class="w100 flex"><img src="img/browser-head.png" class="" ></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd">flex-1-1-400</div>
                      <div class="bg-info pd">flex-0-1-400</div>
@@ -173,27 +173,27 @@
             </div>
             <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue is bigger than the green one because it has "1" in grow, so it fills the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
             <div class="font-29 mg-t-20">
-               <h2 class="flue-color-blue bold mg-none">Layout direction </h2>
+               <h2 class="flue-color-blue bold mg-none">Layout direction</h2>
             </div>
             <p>By default, the direction of a flex container is set to row so the child elements display horizontally. Whichever direction you set on your flex container is referred to as its "main direction" or "main axis", while the other direction (the one you didn’t choose) becomes its “cross direction" or "cross axis". You can switch the "main axis" to vertical and the cross axis to horizontal by setting the class "column" in the flex container.</p>
             <div class="flex-wrap center mg-b">
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-0-1-400 column"&gt;
-                                                &lt;div&gt;item&lt;/div&gt;
-                                                &lt;div&gt;item&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-1-1-400 row"&gt;
-                                                &lt;div&gt;item&lt;/div&gt;
-                                                &lt;div&gt;item&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-0-1-400 column"&gt;
+                                       &lt;div&gt;item&lt;/div&gt;
+                                       &lt;div&gt;item&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-1-1-400 row"&gt;
+                                       &lt;div&gt;item&lt;/div&gt;
+                                       &lt;div&gt;item&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class=""></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd column">
@@ -238,19 +238,19 @@
                <p class="mg-t-5 w100">Flex items are set toward at the start (left) of the main axis (top, whether you are using column).</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 m-start"&gt;
-                                                &lt;div&gt;start&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 m-start"&gt;
+                                       &lt;div&gt;start&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 m-start">
@@ -267,19 +267,19 @@
             <div class="flex-wrap mg-b center">
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 m-center"&gt;
-                                                &lt;div&gt;m-center&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 m-center"&gt;
+                                       &lt;div&gt;m-center&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 m-center">
@@ -296,19 +296,19 @@
                <p class="mg-t-5 w100">Flex items are set toward at the end (right) of the flex container (bottom, whether you are using column).</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 m-end"&gt;
-                                                &lt;div&gt;m-end&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 m-end"&gt;
+                                       &lt;div&gt;m-end&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 m-end">
@@ -325,17 +325,17 @@
                <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the main axis, first and last flex items are aligned to the edges of the main axis of the flex container.</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 m-between"&gt;
-                                                &lt;div&gt;m-between&lt;/div&gt;
-                                                &lt;div&gt;m-between&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 m-between"&gt;
+                                       &lt;div&gt;m-between&lt;/div&gt;
+                                       &lt;div&gt;m-between&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 between">
@@ -353,17 +353,17 @@
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 m-around"&gt;
-                                                &lt;div&gt;m-around&lt;/div&gt;
-                                                &lt;div&gt;m-around&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 m-around"&gt;
+                                       &lt;div&gt;m-around&lt;/div&gt;
+                                       &lt;div&gt;m-around&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 around">
@@ -385,19 +385,19 @@
                <p class="mg-t-5 w100">Flex items are set toward at the start (top) of the cross axis (left, whether you are using column).</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-start"&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-start"&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 align-start">
@@ -414,19 +414,19 @@
                <p class="w100">Flex items are vertically aligned at the center of the cross axis of the flex container (horizontally center, whether you are using column).</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-center"&gt;
-                                                &lt;div&gt;c-center&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-center"&gt;
+                                       &lt;div&gt;c-center&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 align-center">
@@ -444,19 +444,19 @@
                <p class="mg-t-5 w100">Flex items are set toward at the end (bottom) of the flex container (right, whether you are using column).</p>
                <pre class="flex-3 c-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-end"&gt;
-                                                &lt;div&gt;c-end&lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class="flex-0-1-400"&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-end"&gt;
+                                       &lt;div&gt;c-end&lt;/div&gt;
+                              &lt;/div&gt;
+                              &lt;div class="flex-0-1-400"&gt;
 
-                                       &lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 align-end">
@@ -473,17 +473,17 @@
                <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the across axis, first and last flex items are aligned to the edges of the cross axis of the flex container.</p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-between"&gt;
-                                                &lt;div class="flex-100"&gt;c-between&lt;/div&gt;
-                                                &lt;div&gt;c-between&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-between"&gt;
+                                       &lt;div class="flex-100"&gt;c-between&lt;/div&gt;
+                                       &lt;div&gt;c-between&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 c-between">
@@ -501,17 +501,17 @@
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-around"&gt;
-                                                &lt;div class="flex-100"&gt;c-around&lt;/div&gt;
-                                                &lt;div&gt;c-around&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-around"&gt;
+                                       &lt;div class="flex-100"&gt;c-around&lt;/div&gt;
+                                       &lt;div&gt;c-around&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 c-around">
@@ -535,19 +535,19 @@
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-start"&gt;
-                                                &lt;div class="self-end"&gt;self-end&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-start"&gt;
+                                       &lt;div class="self-end"&gt;self-end&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 c-start">
@@ -567,19 +567,19 @@
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-start"&gt;
-                                                &lt;div class="self-center"&gt;self-center&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                                &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-start"&gt;
+                                       &lt;div class="self-center"&gt;self-center&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
+                                       &lt;div&gt;c-start&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 c-start">
@@ -599,19 +599,19 @@
                </p>
                <pre class="flex-3 align-center mg-none">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
-                                       &lt;div class="flex-1-1-400 c-center"&gt;
-                                                &lt;div class="self-start"&gt;self-start&lt;/div&gt;
-                                                &lt;div&gt;c-center&lt;/div&gt;
-                                                &lt;div&gt;c-center&lt;/div&gt;
-                                                &lt;div&gt;c-center&lt;/div&gt;
-                                       &lt;/div&gt;
+            &lt;div class="flex-body"&gt;
+                     &lt;div class="flex-main"&gt;
+                              &lt;div class="flex-1-1-400 c-center"&gt;
+                                       &lt;div class="self-start"&gt;self-start&lt;/div&gt;
+                                       &lt;div&gt;c-center&lt;/div&gt;
+                                       &lt;div&gt;c-center&lt;/div&gt;
+                                       &lt;div&gt;c-center&lt;/div&gt;
                               &lt;/div&gt;
                      &lt;/div&gt;
+            &lt;/div&gt;
                   </code>
                </pre>
-               <div class="flex-0-1-200 column mg-20">
+               <div class="flex-0-1-200 column mg mg-y-20">
                   <div class="w100 flex"><img src="img/browser-head.png" class="" kasperskylab_antibanner="on"></div>
                   <div class="flex-1-1-200 flex-wrap browser font-13 pd-x">
                      <div class="flex-1 bg-primary pd-5 c-center">
