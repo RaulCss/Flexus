@@ -21,8 +21,8 @@ $(document).ready(function(){
     
     $(window).scroll(function(){
     if (window.pageYOffset >= 273) {
-        $('aside ul').css("top","85px");
-        $('aside ul').addClass('fixed');
+        $('aside ul').css("top","70px");
+        $('aside > ul').addClass('fixed');
         
       
         
