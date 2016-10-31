@@ -73,8 +73,9 @@
              <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Introduction</h2>
             </div>
-            <p>
-               Flexus model is constituted of parent container referred as flex container and its inmediate children which are called flex items. So, flex-containers can be flex-items of another flex-container and so on.</p>
+            <p class="mg-b-20">
+               Flexus model is constituted of parent container referred as flex container and its inmediate children which are called flex items. So, flex-containers can be flex-items of another flex-container and so on.
+            </p>
             <div class="font-29">
                <h2 class="flue-color-blue bold mg-none">Main containers</h2>
             </div>
@@ -83,11 +84,11 @@
                </p><div class="flex-wrap mg-b-20 center">
                   <pre class="flex-4 align-center">               
                   <code>
-                     &lt;div class="flex-body"&gt;
-                              &lt;div class="flex-main"&gt;
+         &lt;div class="flex-body"&gt;
+                  &lt;div class="flex-main"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -159,7 +160,7 @@
                      <p>When you don't have grow and shrink, the value you set in basis it's going to convert in percentage.
                      </p>
                   </div>
-                  <div class="bg-flexus flex-100 m-start pd mg-b-20">
+                  <div class="bg-flexus flex-100 m-start pd mg-y-20">
                      <div class="bg-info flex-100 pd mg-y">flex-100</div>
                      <div class="bg-info flex-90 pd mg-y">flex-90</div>
                      <div class="bg-info flex-10 pd mg-y">flex-10</div>
@@ -180,16 +181,16 @@
                <div class="flex-wrap center mg-b">
                   <pre class="flex-3 align-center">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;flex-1-1-400&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;flex-1-1-400&gt;
 
-                              &lt;/div&gt;
-                              &lt;flex-0-1-400&gt;
+                  &lt;/div&gt;
+                  &lt;flex-0-1-400&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -200,7 +201,7 @@
                      </div>
                   </div>
                </div>
-               <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Container blue is bigger than the green one because it has "1" in grow, so it fills the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
+               <p class="bg-primary-o"><span class="bold font-19-p">Remember:</span> Container blue is bigger than the green one because it has "1" in grow, so it fills the remaining space of the parent, the other one hasn't, so it stays measuring 400px.</p>
                <div class="font-29 mg-t-20">
                   <h2 class="flue-color-blue bold mg-none">Layout direction</h2>
                </div>
@@ -208,18 +209,18 @@
                <div class="flex-wrap center mg-b">
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-0-1-400 column"&gt;
-                                       &lt;div&gt;item&lt;/div&gt;
-                                       &lt;div&gt;item&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-1-1-400 row"&gt;
-                                       &lt;div&gt;item&lt;/div&gt;
-                                       &lt;div&gt;item&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-0-1-400 column"&gt;
+                           &lt;div&gt;item&lt;/div&gt;
+                           &lt;div&gt;item&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-1-1-400 row"&gt;
+                           &lt;div&gt;item&lt;/div&gt;
+                           &lt;div&gt;item&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -251,7 +252,7 @@
                      </div>
                   </div>
                </div>
-               <p class="bg-primary-o"><span class="bold font-19">Remember:</span> Always you have to specify the container direction, whether will be "row" or "column".
+               <p class="bg-primary-o"><span class="bold font-19-p">Remember:</span> Always you have to specify the container direction, whether will be "row" or "column".
                   <br>By the way, instead of row you can use directly the main-axis and the cross-axis alignments such m-start, c-start etc.</p>
                <div class="font-29 mg-t-20">
                   <h2 class="flue-color-blue bold mg-none">Flex items</h2>
@@ -268,16 +269,16 @@
                   <p class="mg-t-5 w100">Flex items are set toward at the start (left) of the main axis (top, whether you are using column).</p>
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 m-start"&gt;
-                                       &lt;div&gt;start&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 m-start"&gt;
+                           &lt;div&gt;start&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -297,16 +298,16 @@
                <div class="flex-wrap mg-b center">
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 m-center"&gt;
-                                       &lt;div&gt;m-center&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 m-center"&gt;
+                           &lt;div&gt;m-center&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -326,16 +327,16 @@
                   <p class="mg-t-5 w100">Flex items are set toward at the end (right) of the flex container (bottom, whether you are using column).</p>
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 m-end"&gt;
-                                       &lt;div&gt;m-end&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 m-end"&gt;
+                           &lt;div&gt;m-end&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -355,14 +356,14 @@
                   <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the main axis, first and last flex items are aligned to the edges of the main axis of the flex container.</p>
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 m-between"&gt;
-                                       &lt;div&gt;m-between&lt;/div&gt;
-                                       &lt;div&gt;m-between&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 m-between"&gt;
+                           &lt;div&gt;m-between&lt;/div&gt;
+                           &lt;div&gt;m-between&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -383,14 +384,14 @@
                   </p>
                   <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 m-around"&gt;
-                                       &lt;div&gt;m-around&lt;/div&gt;
-                                       &lt;div&gt;m-around&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 m-around"&gt;
+                           &lt;div&gt;m-around&lt;/div&gt;
+                           &lt;div&gt;m-around&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                   <div class="flex-0-1-200 column mg mg-y-20">
@@ -416,16 +417,16 @@
                      <p class="mg-t-5 w100">Flex items are set toward at the start (top) of the cross axis (left, whether you are using column).</p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-start"&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-start"&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -445,16 +446,16 @@
                      <p class="w100">Flex items are vertically aligned at the center of the cross axis of the flex container (horizontally center, whether you are using column).</p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-center"&gt;
-                                       &lt;div&gt;c-center&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-center"&gt;
+                           &lt;div&gt;c-center&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -467,24 +468,24 @@
                         </div>
                      </div>
                   </div>
-                  <p class="bg-success-o"><span class="bold font-19">Tip:</span> You can combine "center" and "align-center" to center vertically and horizontally with this class: flex-center.</p>
+                  <p class="bg-success-o mg-b-20"><span class="bold font-19-p">Tip:</span> You can combine "center" and "align-center" to center vertically and horizontally with this class: flex-center.</p>
                   <div class="flex-wrap mg-b center">
                      <div class="font-23  flex-100">
-                        <h2 class="flue-color-blue bold mg-none">c-end</h2>
+                        <h2 class="flue-color-blue bold ">c-end</h2>
                      </div>
                      <p class="mg-t-5 w100">Flex items are set toward at the end (bottom) of the flex container (right, whether you are using column).</p>
                      <pre class="flex-3 c-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-end"&gt;
-                                       &lt;div&gt;c-end&lt;/div&gt;
-                              &lt;/div&gt;
-                              &lt;div class="flex-0-1-400"&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-end"&gt;
+                           &lt;div&gt;c-end&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="flex-0-1-400"&gt;
 
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -504,14 +505,14 @@
                      <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the across axis, first and last flex items are aligned to the edges of the cross axis of the flex container.</p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-between"&gt;
-                                       &lt;div class="flex-100"&gt;c-between&lt;/div&gt;
-                                       &lt;div&gt;c-between&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-between"&gt;
+                           &lt;div class="flex-100"&gt;c-between&lt;/div&gt;
+                           &lt;div&gt;c-between&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -532,14 +533,14 @@
                      </p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-around"&gt;
-                                       &lt;div class="flex-100"&gt;c-around&lt;/div&gt;
-                                       &lt;div&gt;c-around&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-around"&gt;
+                           &lt;div class="flex-100"&gt;c-around&lt;/div&gt;
+                           &lt;div&gt;c-around&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -552,30 +553,30 @@
                         </div>
                      </div>
                   </div>
-                  <p class="bg-primary-o"><span class="bold font-19">Remember:</span> c-around and c-between just work if there are two rows in flex container. That's why we've set flex-100 (100%) to the first flex-item, so the second one passed down and get 2 rows.</p>
+                  <p class="bg-primary-o mg-b"><span class="bold font-19-p">Remember:</span> c-around and c-between just work if there are two rows in flex container. That's why we've set flex-100 (100%) to the first flex-item, so the second one passed down and get 2 rows.</p>
                   <div class="font-27">
-                     <h2 class="flue-color-blue bold mg-none">Align-self</h2>
+                     <h2 class="flue-color-blue bold mg-t-20">Align-self</h2>
                   </div>
-                  <p class="mg-t-5 w100">This align-self property allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+                  <p class="mg-y-5 w100">This align-self property allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
                   </p>
                   <div class="flex-wrap mg-b center">
                      <div class="font-23  flex-100">
-                        <h2 class="flue-color-blue bold mg-none">self-start</h2>
+                        <h2 class="flue-color-blue bold mg-t-20">self-start</h2>
                      </div>
                      <p class="mg-t-5 w100">Self-end property allows set toward at the start of the cross axis. Overridden cross-axis.
                      </p>
                      <pre class="flex-3 align-center">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-center"&gt;
-                                       &lt;div class="self-start"&gt;self-start&lt;/div&gt;
-                                       &lt;div&gt;c-center&lt;/div&gt;
-                                       &lt;div&gt;c-center&lt;/div&gt;
-                                       &lt;div&gt;c-center&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-center"&gt;
+                           &lt;div class="self-start"&gt;self-start&lt;/div&gt;
+                           &lt;div&gt;c-center&lt;/div&gt;
+                           &lt;div&gt;c-center&lt;/div&gt;
+                           &lt;div&gt;c-center&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -598,16 +599,16 @@
                      </p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-start"&gt;
-                                       &lt;div class="self-center"&gt;self-center&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-start"&gt;
+                           &lt;div class="self-center"&gt;self-center&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -630,16 +631,16 @@
                      </p>
                      <pre class="flex-3 align-center ">               
                   <code>
-            &lt;div class="flex-body"&gt;
-                     &lt;div class="flex-main"&gt;
-                              &lt;div class="flex-1-1-400 c-start"&gt;
-                                       &lt;div class="self-end"&gt;self-end&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                                       &lt;div&gt;c-start&lt;/div&gt;
-                              &lt;/div&gt;
-                     &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class="flex-body"&gt;
+         &lt;div class="flex-main"&gt;
+                  &lt;div class="flex-1-1-400 c-start"&gt;
+                           &lt;div class="self-end"&gt;self-end&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                           &lt;div&gt;c-start&lt;/div&gt;
+                  &lt;/div&gt;
+         &lt;/div&gt;
+&lt;/div&gt;
                   </code>
                </pre>
                      <div class="flex-0-1-200 column mg mg-y-20">
@@ -663,17 +664,17 @@
                      </p>
                      <pre class="flex-3 align-center ">               
                   <code>
-               &lt;/* Small devices (desktops, 1200px and down) */
-               @media (max-width: @screen-lg-max)&gt;
+   &lt;/* Small devices (desktops, 1200px and down) */
+   @media (max-width: @screen-lg-max)&gt;
 
-               &lt;/* Medium devices (small desktops, 992px and down) */
-               @media (max-width: @screen-md-max)&gt;
+   &lt;/* Medium devices (small desktops, 992px and down) */
+   @media (max-width: @screen-md-max)&gt;
 
-               &lt;/* Small devices (tablets, 768px and down) */
-               @media (max-width: @screen-sm-max)&gt;
+   &lt;/* Small devices (tablets, 768px and down) */
+   @media (max-width: @screen-sm-max)&gt;
 
-               &lt;/* Small devices (mobile devices, 568px and down) */
-               @media (max-width: @screen-xs-max)&gt;
+   &lt;/* Small devices (mobile devices, 568px and down) */
+   @media (max-width: @screen-xs-max)&gt;
                   </code>
                </pre>
                <div class="flex-0-1-200 column mg mg-y-20">
@@ -695,9 +696,9 @@
                         <th></th>
                         <th class="text-nowrap"> Extra-small devices
                            <br><small>Phones (&lt; 568px)</small> </th>
-                        <th> Small devices <small> <br>Tablets (&lt;768px)</small> </th>
-                        <th> Medium devices <small> <br>Small laptop (&lt;992px)</small> </th>
-                        <th> Large devices <small> <br>Desktops (&lt;1200px)</small> </th>
+                        <th class="text-nowrap"> Small devices <small> <br>Tablets (&lt;768px)</small> </th>
+                        <th class="text-nowrap"> Medium devices <small> <br>Small laptop (&lt;992px)</small> </th>
+                        <th class="text-nowrap"> Large devices <small> <br>Desktops (&lt;1200px)</small> </th>
                      </tr>
                   </thead>
                   <tbody>
@@ -809,7 +810,7 @@
             
          </article>
          <aside class="flex-0-1-300 hidden-md c-black flex">
-            <ul class="overflow-y-auto c-black pd-b-20 pd-r-15 fixed" style="top: 70px;">
+            <ul class="overflow-y-auto c-black pd-b-20 pd-r-15" style="top: 70px;">
                <a href="#grid" class="c-blue font-19 bold">Main containers</a>
                <li class="c-black"><a href="#grid-intro">Grid-media System</a></li>
                <li class="c-black"><a href="#overview-container">Flex containers</a></li>
