@@ -164,7 +164,10 @@ html{
 }
 
 [class*="bg-flexus-o"] {
-    background-color: #1c8ec1 !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgb(46, 170, 225) !important;
+    color: #2eaae1 !important;
+/*    padding: 20px;*/
 }
 
 [class*="bg-alt"] {
@@ -223,6 +226,28 @@ BUTTONS
 ==================================================
 */
 
+button.btn, a.btn, div.btn {
+    padding: 7px 12px;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 5px;
+    background: #F8F8F8;
+    /* height: 100%; */
+    /* margin: 5px; */
+    line-height: 1;
+    /* align-self: baseline; */
+    transition: all .3s;
+}
+button {
+    min-height: 35px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+
+
 
 /*
 
@@ -260,12 +285,27 @@ Hover y active para botones
 
 
 
+
 button[class*="btn"]:hover,
-[class*="btn"] > button:hover {
+[class*="btn"] > button:hover,
+a[class*="btn"]:hover,
+[class*="btn"] > a:hover {
     -webkit-filter: contrast(.92);
     -webkit-filter: contrast(.92);
     -moz-filter: contrast(.92);
     filter: contrast(.92);
+/*  transition: initial;*/
+}
+
+button.btn[class*="bg-"]:hover,
+[class*="btn"] > button[class*="bg-"]:hover {
+    -webkit-filter: contrast(1.15);
+    -webkit-filter: contrast(1.15);
+    -moz-filter: contrast(1.15);
+    filter: contrast(1.15);
+}
+.btn:hover:not(div.btn){
+  -webkit-filter: contrast(.92);
 }
 
 button[class*="btn"]:active,
@@ -276,12 +316,11 @@ button[class*="btn"]:active,
     filter: contrast(.84);
 }
 
-button[class*="btn"][class*="bg"]:hover,
-[class*="btn"] > button[class*="bg"]:hover {
-    /*  -webkit-filter: contrast(1.5);*/
-    -webkit-filter: brightness(1.2);
-    -moz-filter: brightness(1.2);
-    filter: brightness(1.2);
+button[class*="bg"]:hover, a[class*="bg"]:hover, [class*="btn"] > button[class*="bg"]:hover {
+    /* -webkit-filter: contrast(1.5); */
+    /* -webkit-filter: brightness(1.2); */
+    -moz-filter: brightness(1.1);
+    filter: brightness(1.1);
     box-shadow:  1px 2px 5px 0px rgba(146, 146, 146, 0.66) !important;
 }
 
@@ -299,14 +338,19 @@ button[class*="btn"][class*="bg"]:active,
 
 button {
     min-height: 35px;
-    height: auto;
+    height: 35px;
     overflow: hidden;
     position: relative;
     white-space: nowrap;
 }
 
+div.btn{
+  
+}
 
 [class*="btn"][class*="xl"] > button,
+[class*="btn"][class*="xl"] > a,
+[class*="btn"][class*="xl"] > div,
 button.xl,
 [class*="btn"].xl,
 [class*="xl"]{
@@ -319,6 +363,8 @@ button.xl,
 }
 
 [class*="btn"][class*="xxl"] > button,
+[class*="btn"][class*="xxl"] > a,
+[class*="btn"][class*="xxl"] > div,
 button.xxl,
 [class*="btn"].xxl{
     font-size: 21px;
@@ -329,6 +375,8 @@ button.xxl,
 }
 
 [class*="btn"][class*="lg"] > button,
+[class*="btn"][class*="lg"] > a,
+[class*="btn"][class*="lg"] > div,
 button.lg,
 [class*="btn"].lg{
     font-size: 16px;
@@ -336,6 +384,8 @@ button.lg,
 }
 
 [class*="btn"][class*="sm"] > button,
+[class*="btn"][class*="sm"] > a,
+[class*="btn"][class*="sm"] > div,
 button.sm,
 [class*="btn"].sm{
     font-size: 12px;
@@ -346,6 +396,8 @@ button.sm,
 }
 
 [class*="btn"][class*="xs"] > button,
+[class*="btn"][class*="xs"] > a,
+[class*="btn"][class*="xs"] > div,
 button.xs,
 [class*="btn"].xs{
     font-size: 10px;
@@ -358,7 +410,7 @@ button.xs,
 
 .btn-text {
     display: flex;
-    margin: 5px;
+    
     border-radius: 6px;
     transition: all .3s;
   align-self: baseline
@@ -372,14 +424,30 @@ button.btn, a.btn{
     border: 1px solid rgb(213, 213, 213);
     border-radius: 5px;
     background: #F8F8F8;
-/*    height: 100%;*/
-    margin: 5px;
+    /*    height: 100%;*/
+    /*    margin: 5px;*/
     line-height: 1;
+    /* align-self: baseline; */
+    transition: all .3s;
+}
+
+ a.btn, div.btn{
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 7px 13px;
+    justify-content: center;
+}
+
+div.btn-text > div.btn{
+  padding: 9.5px 12px !important;
 }
 
 .btn-text > button,
 .btn-text > span,
-.btn-text > a {
+.btn-text > a,
+.btn-text > div{
     padding: 7px 12px;
     border: 1px solid rgb(213, 213, 213);
     border-right: 1px solid transparent;
@@ -393,44 +461,43 @@ button.btn, a.btn{
   font-size: 14px;
 }
 
+.btn-text > a {
+    line-height: 1.4;
+}
 
 
-.btn-text > input + button:first-of-type{
-    border-top-right-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
+
+.btn-text > input + a:first-of-type, .btn-text > input + div:first-of-type{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-left: 1px solid transparent;
 }
 
-.btn-text > input + button:last-of-type{
+.btn-text > input + button:last-of-type, .btn-text > input + a:last-of-type, .btn-text > input + div:last-of-type, {
     border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
     border-left: 1px solid transparent !important;
 }
 
 
-.btn-text > input + button{
+.btn-text > input + button, .btn-text > input + a, .btn-text > input + div{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent !important;
   
 }
 
-.btn-text > button + input {
+.btn-text > button + input, .btn-text > a + input, .btn-text > div + input {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 /*    border-left: 1px solid transparent;*/
     
 }
 
-.btn-text > button + input {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-/*    border-left: 1px solid transparent;*/
-    
-}
-
-.btn-text > button[class*="bg"] + input {
+.btn-text > button[class*="bg"] + input, .btn-text > div[class*="bg"] + input {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: 1px solid transparent;
@@ -438,7 +505,7 @@ button.btn, a.btn{
 }
 
 
-.btn-text > button + button {
+.btn-text > button + button, .btn-text > div + div {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   border-top-right-radius: 0px;
@@ -446,14 +513,14 @@ button.btn, a.btn{
   
 }
 
-.btn-text > button[class*="bg"] + button[class*="bg"] {
+.btn-text > button[class*="bg"] + button[class*="bg"], .btn-text > div[class*="bg"] + div[class*="bg"] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent !important;
 }
 
-.btn-text > button + button[class*="bg"] {
+.btn-text > button + button[class*="bg"], .btn-text > div + div[class*="bg"] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: 1px solid transparent;
@@ -461,14 +528,14 @@ button.btn, a.btn{
 }
 
 
-.btn-text > button[class*="bg"] + button{
+.btn-text > button[class*="bg"] + button, .btn-text > div[class*="bg"] + div{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-right: 1px solid transparent !important;
 }
 
 
-.btn-text > button:first-child, .btn-text > a:first-child{
+.btn-text > button:first-child, .btn-text > a:first-child,  .btn-text > div:first-child{
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-right: 1px solid transparent !important;
@@ -478,8 +545,8 @@ button.btn, a.btn{
 
 
 .btn-text >:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
     border-right: 1px solid #D5D5D5 !important;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -491,6 +558,7 @@ button.btn, a.btn{
     border-right: 1px solid rgba(213, 213, 213, 0) !important;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    color: white;
 }
 
 .btn-text > input {
@@ -514,6 +582,7 @@ input.text:focus {
     /* border-color: rgba(255, 255, 255, 0.55); */
     border: 1px solid rgba(50, 174, 228, 0.45) !important;
     outline: 0;
+  z-index: 1;
 }
 
 .btn-text > input:focus, input.text:focus{
@@ -531,6 +600,7 @@ BACKGROUNDS AND COLORS
 
 [class*="bg-night"] {
     background: linear-gradient(to right, rgb(45, 83, 95) 0%, rgb(37, 77, 87) 41%, rgb(22, 68, 78) 100%)!important;
+  color: white;
 }
 
 button[class*="bg-night"]:hover {
@@ -544,43 +614,80 @@ button[class*="bg-night"]:active {
     filter: contrast(1.2) !important;
 }
 
+
+[class*="bg-night-o"] {
+    background: linear-gradient(to right, rgb(76, 116, 129) 0%, rgb(106, 155, 168) 41%, rgb(53, 109, 121) 100%)!important;
+    color: white;
+    /* background: rgb(95, 152, 164) !important; */
+    border: 1px solid rgb(44, 82, 94) !important;
+    color: #ffffff !important;
+/*    padding: 20px;*/
+}
+
+button[class*="bg-night-o"]:hover {
+    -webkit-filter: brightness(1.3)!important;
+    filter: brightness(1.3)!important;
+}
+
+
 [class*="bg-info"] {
     background: linear-gradient(to right, rgb(109, 206, 235) 0%, rgb(98, 197, 222) 41%, rgb(55, 189, 218) 100%)!important;
+  color: white;
 }
 
-button[class*="bg-info"]:hover {
+button[class*="bg-info"]:hover, a[class*="bg-info"]:hover  {
     -webkit-filter: brightness(1.1)!important;
+  filter: brightness(1.1)!important;
 }
 
+.bg-info-o{
+    background: #e2f8ff !important;
+    border: 1px solid rgb(107, 204, 232) !important;
+    color: #52c3e4 !important;
+}
+
+button.bg-info-o:hover {
+    -webkit-filter: brightness(1.1)!important;
+  filter: brightness(1.1)!important;
+}
 
 /*[class*="bg-info"]:active{background:linear-gradient(to right, rgba(111,189,211,1) 0%, rgba(87,175,199,1) 41%, rgba(61,149,174,1) 100%)!important;}*/
 
 [class*="bg-primary"] {
     background: linear-gradient(141deg, #13bfdf 0%, #49B6EA 69%, #53a1eb 100%)!important;
+    color: white;
 }
 
 p[class*="bg-primary"] {
-    background: linear-gradient(141deg, #13bfdf 0%, #49B6EA 69%, #53a1eb 100%)!important;
+/*    background: linear-gradient(141deg, #13bfdf 0%, #49B6EA 69%, #53a1eb 100%)!important;*/
     z-index: 0;
     padding: 20px;
+  color: white;
 }
-
-p[class*="bg-primary-o"] {
-    background: rgba(46, 170, 225, 0.25) !important;
-    z-index: 0;
-    border: 1px solid rgba(46, 170, 225, 0.54) !important;
-    color: #008ecf !important;
-    padding: 20px;
-}
-
 
 
 button[class*="bg-primary"]:hover {
     -webkit-filter: brightness(1.1)!important;
+  filter: brightness(1.1)!important;
 }
+
+[class*="bg-primary-o"] {
+    background: linear-gradient(141deg, #bef5ff 0%, #e7f7ff 69%, #c2f6ff 100%)!important;
+    z-index: 0;
+    border: 1px solid rgba(46, 170, 225, 0.54) !important;
+    color: #008ecf !important;
+/*    padding: 20px;*/
+}
+
+button[class*="bg-primary-o"]:hover {
+    -webkit-filter: brightness(1.1)!important;
+  filter: brightness(1.1)!important;
+}
+
 
 [class*="bg-success"] {
     background: linear-gradient(to right, rgb(120, 218, 62) 0%, rgba(139, 230, 53, 1) 53%, rgba(139, 230, 53, 1) 100%) !important;
+   color: white;
 }
 
 p[class*="bg-success"] {
@@ -588,11 +695,15 @@ p[class*="bg-success"] {
     padding: 20px;
 }
 
-p[class*="bg-success-o"] {
+[class*="bg-success-o"] {
    background: #dfffbe !important;
     border: 1px solid rgb(120, 218, 62) !important;
     color: #44aa6c !important;
-    padding: 20px;
+/*    padding: 20px;*/
+}
+
+button.bg-success-o:hover {
+    filter: contrast(1.1);
 }
 
 
@@ -602,9 +713,34 @@ p[class*="bg-success-o"] {
 
 button[class*="bg-alert"]:hover {
     -webkit-filter: brightness(1.1) !important;
+  filter: brightness(1.1)!important;
 }
 
+
+[class*="bg-alert-o"] {
+    background: linear-gradient(to right, rgb(255, 242, 198) 0%, rgb(255, 242, 216) 100%) !important;
+    /* background: #dfffbe !important; */
+    border: 1px solid rgb(243, 209, 99) !important;
+    color: #fcad0c !important;
+/*    padding: 20px;*/
+}
+
+button[class*="bg-alert-o"]:hover {
+    -webkit-filter: brightness(1.1) !important;
+  filter: brightness(1.1)!important;
+}
+
+
+
 [class*="bg-warning"] {
+    background: linear-gradient(to right, rgba(255, 175, 75, 1) 0%, rgba(255, 146, 10, 1) 100%) !important;
+}
+
+[class*="bg-warning-o"] {
+    background: linear-gradient(to right, rgba(255, 175, 75, 1) 0%, rgba(255, 146, 10, 1) 100%) !important;
+}
+
+[class*="bg-warning-o"]:hover {
     background: linear-gradient(to right, rgba(255, 175, 75, 1) 0%, rgba(255, 146, 10, 1) 100%) !important;
 }
 
@@ -614,7 +750,22 @@ button[class*="bg-alert"]:hover {
 
 button[class*="bg-danger"]:hover {
     -webkit-filter: brightness(1.25)!important;
+  filter: brightness(1.25)!important;
 }
+
+[class*="bg-danger-o"] {
+    background: linear-gradient(to right, rgb(255, 227, 218) 0%, rgb(255, 227, 216) 100%) !important;
+    /* background: #dfffbe !important; */
+    border: 1px solid rgb(255, 151, 114) !important;
+    color: #ff591e !important;
+/*    padding: 20px;*/
+}
+
+button[class*="bg-danger-o"]:hover {
+    -webkit-filter: brightness(1.25)!important;
+  filter: brightness(1.25)!important;
+}
+
 
 [class*=""] {
     background: linear-gradient(to right, rgb(120, 218, 62) 0%, rgba(139, 230, 53, 1) 53%, rgba(139, 230, 53, 1) 100%) !important;
@@ -624,7 +775,7 @@ button[class*="btn"]:focus {
     outline: 0;
 }
 
-button[class*="bg"], a[class*="bg"], .btn-text > button[class*="bg"], .btn-text > a[class*="bg"]{
+button[class*="bg"]:not([class*="-o"]), a[class*="bg"]:not([class*="-o"]), div[class*="bg"]:not([class*="-o"]), .btn-text > button[class*="bg"], .btn-text > a[class*="bg"], .btn-text > div[class*="bg"]{
     color: white !important;
     border: 1px solid transparent !important;
     transition: all .3s;
@@ -3242,11 +3393,13 @@ table.primary td, table.primary th{
 
 .table-container, .table-container > *, .table-container > * > *{
     overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   
 }
 
 .table-wrap{
     overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .text-nowrap {

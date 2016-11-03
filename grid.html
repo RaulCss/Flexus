@@ -17,16 +17,16 @@
 <body data-gr-c-s-loaded="true">
    <div class="flex-container">
 
-      <header class="center fixed flex-header nowrap row-reverse header pd-r">
+      <header class="center fixed flex-header nowrap pd-r row-reverse">
          <div class="check-trigger pd-x-20 pd-y-15 ">
             <input id="ac-1" name="accordion-1" type="checkbox">
             <label for="ac-1" class="c-blue icon flex align-start-sm baseline hidden visible-sm">☰</label>
          </div>
-         <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-x-20 pd-y-5 between">
+         <nav class="bold column-sm flex flex-0-1-1250 font-19 pd-x-20 pd-t-5">
             <a class="pd-t-5 pd-x c-blue flexus" href="index.html"><img src="img/flexus-logo.png" style="width:120px;" kasperskylab_antibanner="on"></a>
             <div class="align-start-sm collapse-in column-sm hidden-sm flex">
                <a class="pd c-blue ">Getting started</a>
-               <a class="pd c-blue ">CSS</a>
+               <a class="pd c-blue " href="css.html">CSS</a>
                <a class="pd c-blue " href="grid.html">Grid</a>
                <a class="pd c-blue ">Themes</a>
                <a class="pd c-blue ">Blog</a>
@@ -59,7 +59,7 @@
 
             </div>
             <a class=" pd-t-5 c-blue container-image flex-0-1-400 flex-img-thumbnail">
-               <img src="img/flexus-logo.png" kasperskylab_antibanner="on">
+               <img src="img/flexus-logo.png">
             </a>
          </div>
       </main>
@@ -82,7 +82,7 @@
             <p>First of all flexus requires two main flex containers which are "flex-body" and "flex-main.
                <br> ( As you can see flex-main is a flex-item of flex-body ).
                </p><div class="flex-wrap mg-b-20 center">
-                  <pre class="flex-4 align-center">               
+                  <pre class="flex-3-1-400 align-center">               
                   <code>
          &lt;div class="flex-body"&gt;
                   &lt;div class="flex-main"&gt;
@@ -179,7 +179,7 @@
                </div>
                <p>Once we have declarated our main flex containers we can put flex containers into flex-main using grid-media system.</p>
                <div class="flex-wrap center mg-b">
-                  <pre class="flex-3 align-center">               
+                  <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -207,7 +207,7 @@
                </div>
                <p>By default, the direction of a flex container is set to row so the child elements display horizontally. Whichever direction you set on your flex container is referred to as its "main direction" or "main axis", while the other direction (the one you didn’t choose) becomes its “cross direction" or "cross axis". You can switch the "main axis" to vertical and the cross axis to horizontal by setting the class "column" in the flex container.</p>
                <div class="flex-wrap center mg-b">
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -267,7 +267,7 @@
                      <h2 class="flue-color-blue bold mg-none flex-100">m-start</h2>
                   </div>
                   <p class="mg-t-5 w100">Flex items are set toward at the start (left) of the main axis (top, whether you are using column).</p>
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -296,7 +296,7 @@
                </div>
                <p>Flex items are horizontally aligned at the center of the flex container (vertically center, whether you are using column).</p>
                <div class="flex-wrap mg-b center">
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center  ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -325,7 +325,7 @@
                      <h2 class="flue-color-blue bold mg-none">m-end</h2>
                   </div>
                   <p class="mg-t-5 w100">Flex items are set toward at the end (right) of the flex container (bottom, whether you are using column).</p>
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center  ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -354,7 +354,7 @@
                      <h2 class="flue-color-blue bold mg-none">m-between</h2>
                   </div>
                   <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the main axis, first and last flex items are aligned to the edges of the main axis of the flex container.</p>
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -382,7 +382,7 @@
                   </div>
                   <p class="mg-t-5 w100">Flex items are displayed with equal spacing around every flex item along the main axis, even the first and last flex items.
                   </p>
-                  <pre class="flex-3 align-center ">               
+                  <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -415,7 +415,7 @@
                         <h2 class="flue-color-blue bold mg-none flex-100">c-start</h2>
                      </div>
                      <p class="mg-t-5 w100">Flex items are set toward at the start (top) of the cross axis (left, whether you are using column).</p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -444,7 +444,7 @@
                         <h2 class="flue-color-blue bold mg-none flex-100">c-center</h2>
                      </div>
                      <p class="w100">Flex items are vertically aligned at the center of the cross axis of the flex container (horizontally center, whether you are using column).</p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center  ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -474,7 +474,7 @@
                         <h2 class="flue-color-blue bold ">c-end</h2>
                      </div>
                      <p class="mg-t-5 w100">Flex items are set toward at the end (bottom) of the flex container (right, whether you are using column).</p>
-                     <pre class="flex-3 c-center ">               
+                     <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -503,7 +503,7 @@
                         <h2 class="flue-color-blue bold mg-none">c-between</h2>
                      </div>
                      <p class="mg-t-5 w100">Flex items are displayed with equal spacing between them along the across axis, first and last flex items are aligned to the edges of the cross axis of the flex container.</p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center  ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -531,7 +531,7 @@
                      </div>
                      <p class="mg-t-5 w100">Flex items are displayed with equal spacing around every flex item along the cross axis, even the first and last flex items.
                      </p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center  ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -565,7 +565,7 @@
                      </div>
                      <p class="mg-t-5 w100">Self-end property allows set toward at the start of the cross axis. Overridden cross-axis.
                      </p>
-                     <pre class="flex-3 align-center">               
+                     <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -597,7 +597,7 @@
                      </div>
                      <p class="mg-t-5 w100">Self-end property allows set toward at the center of the cross axis. Overridden cross-axis.
                      </p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -629,7 +629,7 @@
                      </div>
                      <p class="w100 mg-t-5">Self-end property allows set toward at the end of the cross axis. Overridden cross-axis.
                      </p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center ">               
                   <code>
 &lt;div class="flex-body"&gt;
          &lt;div class="flex-main"&gt;
@@ -662,7 +662,7 @@
                      <p class="mg-t-5 w100">
                         Sometimes we need help of standar media-queries instead of smart breakpoints when we have to made a exactly responsive design.                        So here are the breakpoints for our grid system.
                      </p>
-                     <pre class="flex-3 align-center ">               
+                     <pre class="flex-3-1-400 align-center  ">               
                   <code>
    &lt;/* Small devices (desktops, 1200px and down) */
    @media (max-width: @screen-lg-max)&gt;
